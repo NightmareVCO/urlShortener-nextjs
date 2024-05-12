@@ -69,7 +69,7 @@ const DashboardUsers = async ({ searchParams }: any) => {
                         View
                       </Button>
                     </Link>
-                    <DeleteUserForm userId={user.id} />
+                    {!user.isAdmin && <DeleteUserForm userId={user.id} />}
                   </div>
                 </td>
               </tr>
