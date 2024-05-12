@@ -10,6 +10,8 @@ import Link from "next/link";
 const TableItem = async (url: UrlProperties) => {
   const { shortUrl, originalUrl, clicks, status, date } = url;
   const preview = await getPreview(originalUrl);
+  // get hostname from env
+  const hostname = process.env.NEXT_PUBLIC_HOSTNAME;
 
   const formattedDate = new Date(date).toLocaleDateString();
 
@@ -24,7 +26,7 @@ const TableItem = async (url: UrlProperties) => {
         >
           <p>{shortUrl}</p>
         </Link>
-        <CopyButton text={shortUrl} />
+        <CopyButton text={`${hostname}/url/${shortUrl}`} />
       </td>
       <td className="hidden max-w-md py-2 text-center truncate lg:table-cell border-btn-gray-border">
         <div className="flex items-center justify-center gap-x-4">
@@ -64,7 +66,7 @@ const TableItem = async (url: UrlProperties) => {
         </td>
       )}
       {!status && (
-        <td className="flex items-center justify-center px-4 py-2 gap-x-3 border-btn-gray-border">
+        <td className="lg:flex items-center justify-center hidden px-4 py-2 gap-x-3 border-btn-gray-border">
           <p className="text-center text-yellow-600 min-w-14">Inactive</p>
           <InactiveLinkIcon />
         </td>
