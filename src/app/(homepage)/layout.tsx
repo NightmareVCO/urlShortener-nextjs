@@ -1,6 +1,7 @@
 import "@components/globals.css";
 
 import Background from "@components/background/Background";
+import Banner from "@components/banner/Banner";
 import Footer from "@components/footer/Footer";
 import Navbar from "@components/navbar/Navbar";
 import { HomeInformation } from "@config/site";
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className + " p-6 sm:p-8 md:p-10 lg:p-12 xl:p-14"}>
+        <Banner />
         <Background />
         <header>
           <Navbar />
