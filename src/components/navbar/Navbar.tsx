@@ -46,7 +46,7 @@ const Navbar = async () => {
           <Link href={NavReferences.Shortener}>
             <Button
               shadow
-              className="bg-main-blue border-main-blue active:bg-main-blue-active"
+              className="hidden sm:block bg-main-blue border-main-blue active:bg-main-blue-active"
             >
               Shortener
             </Button>
@@ -54,7 +54,7 @@ const Navbar = async () => {
         )}
         {user && (
           <form action={logout}>
-            <Button className="hidden sm:block bg-main-gray border-main-gray-border active:bg-main-gray-border">
+            <Button className="bg-main-gray border-main-gray-border active:bg-main-gray-border">
               Logout
             </Button>
           </form>
