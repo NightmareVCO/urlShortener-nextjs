@@ -40,48 +40,16 @@ const DashboardTransaction = ({ urls }: DashboardTransactionProperties) => {
               <td className="p-3">{url.date.toLocaleDateString()}</td>
               <td className="p-3">
                 <Link
-                  href={url.shortUrl}
+                  href={`url/${url.shortUrl}`}
                   className="font-bold transition hover:underline hover:text-main-blue-active"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   {url.shortUrl}
                 </Link>
               </td>
             </tr>
           ))}
-          {/* <tr>
-            <td className="p-3">
-              <User />
-            </td>
-            <td className="p-3">
-              <span className="p-[5px] rounded-md bg-green-800/50">Active</span>
-            </td>
-            <td className="p-3">14/02/2024</td>
-            <td className="p-3">
-              <Link
-                href="http://localhost:3000/url/gestion713"
-                className="transition hover:underline hover:text-main-blue-active"
-              >
-                Short Url Here
-              </Link>
-            </td>
-          </tr>
-          <tr>
-            <td className="p-3">
-              <User />
-            </td>
-            <td className="p-3">
-              <span className="p-[5px] rounded-md bg-red-800/50">Inactive</span>
-            </td>
-            <td className="p-3">14/02/2024</td>
-            <td className="p-3">
-              <Link
-                href="http://localhost:3000/url/gestion713"
-                className="transition hover:underline hover:text-main-blue-active"
-              >
-                Short Url Here
-              </Link>
-            </td>
-          </tr> */}
         </tbody>
       </table>
     </Section>
