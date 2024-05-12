@@ -26,7 +26,7 @@ const TableItem = async (url: UrlProperties) => {
         >
           <p>{shortUrl}</p>
         </Link>
-        <CopyButton text={`${hostname}/url/${shortUrl}`} />
+        <CopyButton text={`${hostname}url/${shortUrl}`} />
       </td>
       <td className="hidden max-w-md py-2 text-center truncate lg:table-cell border-btn-gray-border">
         <div className="flex items-center justify-center gap-x-4">
