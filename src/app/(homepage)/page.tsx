@@ -28,16 +28,16 @@ const Home = async () => {
             </p>
           </div>
 
-          <Link href={NavReferences.Shortener}>
-            <Button
-              shadow
-              className="bg-main-blue border-main-blue active:bg-main-blue-active"
-            >
-              <Link href={NavReferences.Shortener}>
+          <div>
+            <Link href={NavReferences.Login}>
+              <Button
+                shadow
+                className="bg-main-blue border-main-blue active:bg-main-blue-active"
+              >
                 Start To Shorten Your Links Now!
-              </Link>
-            </Button>
-          </Link>
+              </Button>
+            </Link>
+          </div>
         </div>
 
         <div className="size-96 xl:size-1/3">
