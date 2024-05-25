@@ -1,7 +1,6 @@
+import { login } from "@actions/auth.action";
 import { useState } from "react";
 import { useFormState } from "react-dom";
-
-import { login } from "@/lib/actions/auth.action";
 
 export function useLogin() {
   const [state, formAction] = useFormState(login, undefined);
