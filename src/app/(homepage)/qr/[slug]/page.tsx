@@ -6,6 +6,7 @@ import { Suspense } from "react";
 
 const QR = async ({ params }: any) => {
   const { slug } = params;
+  const realSlug = `linkloom.live/url/${slug}`;
 
   return (
     <main>
@@ -14,7 +15,7 @@ const QR = async ({ params }: any) => {
           <h2 className="text-3xl font-bold">QR Code</h2>
           <Suspense fallback={<ImageSkeleton />}>
             <Image
-              src={`https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=${slug}`}
+              src={`https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=${realSlug}`}
               alt="QR Code"
               width={350}
               height={350}
